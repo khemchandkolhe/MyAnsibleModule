@@ -1,0 +1,22 @@
+---
+ - students: 
+   - name: ram
+     phno: 1234567899
+     address: 
+     - DoorNo: 123
+       StreetNo: 123
+       Pincode: 123
+
+     - name: shyam
+       phno: 1234567899
+       address: 
+       - DoorNo: 123
+         StreetNo: 123
+         Pincode: 123
+
+       - name: mahesh
+         phno: 1234567899
+         address: 
+         - DoorNo: 123
+           StreetNo: 123
+           Pincode: 123
