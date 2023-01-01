@@ -21,8 +21,8 @@
     when: ansible_os_family=="RedHat" 
 
   - name: i want to restart webserver on my RedHat nodes
-    yum:
-     name: httpd
-     state: started 
+    service:
+      name: httpd
+      state: present 
     when: ansible_os_family=="RedHat"   
      
