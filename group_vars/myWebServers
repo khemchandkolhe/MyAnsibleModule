@@ -1,4 +1,4 @@
 ---
 key: value
 mywebpackubuntu: apache2
-mywebpackredhat: httpdd
+mywebpackredhat: httpd
