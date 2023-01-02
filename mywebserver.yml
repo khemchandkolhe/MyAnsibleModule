@@ -4,25 +4,25 @@
   tasks: 
   - name: i want to install webserver on my ubuntu nodes
     apt:
-     name: apache2
+     name: {{mywebpackubuntu}}
      state: present
     when: ansible_os_family== "Debian" 
 
   - name: i want to restart webserver on my ubuntu nodes
     service:
-     name: apache2
+     name: {{mywebpackubuntu}}
      state: started
     when: ansible_os_family=="Debian" 
 
   - name: i want to install webserver on my RedHat nodes 
     yum: 
-     name: httpd
+     name: {{mywebpackredhat}}
      state: present
     when: ansible_os_family=="RedHat" 
 
   - name: i want to restart webserver on my RedHat nodes
     service:
-      name: httpd
+      name: {{mywebpackredhat}}
       state: started 
     when: ansible_os_family=="RedHat"   
      
