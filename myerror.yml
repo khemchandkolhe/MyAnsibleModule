@@ -12,6 +12,7 @@
       apt:
        name: tree
        statesss: present
+       ignore_errors: true
       
 
     - name: install wget
