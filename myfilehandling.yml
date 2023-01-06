@@ -13,13 +13,13 @@
     copy:
      src: mystaticfile.txt
      dest: /home/ubuntu/mystaticfile  
-    notify: restartwebserver
+     notify: restartwebserver
 
   - name: copy index file into ansible node
     template:
       src: myindex.j2
       dest: /var/www/html/index.html  
-  - notify: restartwebserver     
+      notify: restartwebserver     
 
   - name: download file from internate
     get_url:
