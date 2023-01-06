@@ -1,0 +1,6 @@
+---
+- name: i want to create a file on ansible node
+  file:
+    path: /home/ubuntu/mytestfile
+    state: touch
+     
