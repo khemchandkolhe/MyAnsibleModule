@@ -24,7 +24,8 @@
   - name: create a folder
     file:
        path: /home/ubuntu/myfolder
-       state: directory     
+       state: directory 
+  - notify: restartwebserver     
 
   - name: download file from internate
     get_url:
