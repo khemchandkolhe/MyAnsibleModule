@@ -25,7 +25,7 @@
     file:
        path: /home/ubuntu/myfolder
        state: directory 
-  - notify: restartwebserver     
+    notify: restartwebserver     
 
   - name: download file from internate
     get_url:
