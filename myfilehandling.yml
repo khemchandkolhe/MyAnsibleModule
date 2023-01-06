@@ -19,7 +19,12 @@
     template:
       src: myindex.j2
       dest: /var/www/html/index.html  
-    notify: restartwebserver     
+    notify: restartwebserver 
+
+  - name: create a folder
+    file:
+       path: /home/ubuntu/myfolder
+       state: directory     
 
   - name: download file from internate
     get_url:
