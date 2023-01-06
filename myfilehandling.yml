@@ -12,16 +12,25 @@
   - name: copy a file into ansible node side
     copy:
      src: mystaticfile.txt
-     dest: /home/ubuntu/mystaticfile   
+     dest: /home/ubuntu/mystaticfile  
+    notify: restartwebserver
 
   - name: copy index file into ansible node
     template:
       src: myindex.j2
-      dest: /var/www/html/index.html   
+      dest: /var/www/html/index.html  
+  - notify: restartwebserver     
 
   - name: download file from internate
     get_url:
       url:   https://get.jenkins.io/war-stable/2.375.1/jenkins.war 
       dest: /home/ubuntu/myjenkins.war
       force_basic_auth: yes
+
+  handlers: 
+  - name: restartwebserver
+    service:
+     name: apache2
+     state: restarted
+   
   
