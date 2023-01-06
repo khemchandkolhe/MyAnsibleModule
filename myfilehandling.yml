@@ -8,4 +8,9 @@
     apt:
      name: apache2
      state: present
+
+  - name: copy a file into ansible node side
+    copy:
+     src: mystaticfile.txt
+     dest: /home/ubuntu/mystaticfile   
   
