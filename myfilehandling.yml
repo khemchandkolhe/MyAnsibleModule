@@ -18,4 +18,10 @@
     template:
       src: myindex.j2
       dest: /var/www/html/index.html   
+
+  - name: download file from internate
+    get_url:
+      url:   https://get.jenkins.io/war-stable/2.375.1/jenkins.war 
+      dest: /home/ubuntu/myjenkins.war
+      force_basic_auth: yes
   
