@@ -2,5 +2,5 @@
 - name: deploy java application on prod nodes
   get_url:
    url: https://mybucket9jan.s3.us-east-2.amazonaws.com/mahaLogin.war
-   dest: /opt/tomcat/webapps/
+   dest: /opt/tomcat/webapps/mahaLogin.war
    force_basic_auth: yes
